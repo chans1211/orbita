@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Órbita · un juego de un solo dedo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <canvas id="canvas" width="1120" height="1120" aria-label="Zona de juego"></canvas>
+
+    <div class="hud">
+      <span>orbes <b id="orbs">0</b></span>
+      <span>mejor <b id="best">0</b></span>
+    </div>
+
+    <p id="tip" class="tip"></p>
+
+    <section id="menu" class="menu">
+      <h1 id="title">Órbita</h1>
+      <p id="subtitle">Eres una chispa atrapada alrededor de una estrella. No puedes frenar ni cambiar de dirección: solo elegir en qué anillo girar.</p>
+
+      <ul id="legend" class="legend">
+        <li><span class="icon icon-player"></span>Tú. Giras sin parar y cada vez más rápido.</li>
+        <li><span class="icon icon-orb"></span>Orbe: tócalo para sumar un punto.</li>
+        <li><span class="icon icon-warning"></span>Arco punteado: es un aviso, todavía es inofensivo.</li>
+        <li><span class="icon icon-arc"></span>Arco sólido: si lo tocas, pierdes. Cambia de anillo.</li>
+      </ul>
+
+      <button id="play" class="button">Girar</button>
+
+      <p id="controls" class="controls">
+        Sube con ↑ o W, baja con ↓ o S.<br>
+        En el celular, toca la mitad derecha para subir y la izquierda para bajar.
+      </p>
+    </section>
+
+    <button id="mute" class="button button-small" aria-pressed="false">sonido: sí</button>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
